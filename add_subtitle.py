@@ -1,7 +1,7 @@
 from moviepy.editor import *
 import pandas as pd 
 
-def generatingTranscript(transcript, video):
+def addSubtitle(text, video):
     """ 
         Given a video and transcript for each time step, it generate the video with the trancript
 
@@ -24,5 +24,5 @@ def generatingTranscript(transcript, video):
 
 
 if __name__ == "__main__":
-    video = addingCaptions('audio.tsv','samplevideo.mp4')
+    video = addSubtitle('audio.tsv','samplevideo.mp4')
     video.write_videofile("samplevideo_composition.mp4")
